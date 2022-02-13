@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+ul[class],
+ol[class] {
+   padding: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+   margin: 0;
+}
+body {
+   min-height: 100vh;
+   scroll-behavior: smooth;
+   text-rendering: optimizeSpeed;
+   line-height: 1.5;
+}
+ul[class],
+ol[class] {
+   list-style: none;
+}
+a:not([class]) {
+   text-decoration-skip-ink: auto;
+}
+img {
+   max-width: 100%;
+   display: block;
+}
+article > * + * {
+   margin-top: 1em;
+}
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+.header {
+   position: relative;
+}
+.header::after {
+   content: " ";
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: black;
+   z-index: -1;
+}
+._wrapper {
+   max-width: 1760px;
+   margin: 0 auto;
+   padding: 0 80px;
+}
+.content {
+   display: flex;
+   position: relative;
+   align-items: center;
+   height: 80px;
+}
+.nav {
+   background-color: black;
+   display: flex;
+}
+.content_logo {
+   display: flex;
+   flex: 0 1 50%;
+}
+.logo {
+   display: flex;
+   align-items: center;
+}
+.logo_svg {
+   fill: white;
+   display: block;
+   width: 102px;
+   height: 80px;
+}
+.content_nav {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   flex: 0 1 50%;
+}
+.content_nav_first {
+   display: flex;
+   margin-right: 8px;
+}
+.content_nav_host {
+   color: white;
+   padding: 12px;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 18px;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+   cursor: pointer;
+}
+.content_nav_language {
+   padding: 12px;
+}
+.content_nav_language_svg {
+   display: block;
+   width: 16px;
+   height: 16px;
+   fill: white;
+}
+.content_nav_user {
+   display: flex;
+   padding: 5px 5px 5px 12px;
+   justify-content: space-between;
+   align-items: center;
+   outline: none;
+   border: none;
+   background-color: white;
+   border-radius: 24px;
+}
+.content_nav_user_three_line {
+   display: flex;
+   flex-direction: column;
+}
+.three_line_change {
+   height: 2px;
+   width: 14px;
+   background-color: black;
+   margin-bottom: 2px;
+}
+.three_line_change:last-child {
+   margin: 0;
+}
+.content_nav_user_log_in {
+   margin-left: 12px;
+}
+.nav_search_bar {
+   padding: 0 24px;
+   flex: 0 1 auto;
+   min-width: 348px;
+}
+.nav_search_bar_button {
+   display: flex;
+   align-items: center;
+   height: 48px;
+   padding: 0 0 0 8px;
+   border: 1px solid #222222;
+   background-color: white;
+   border-radius: 24px;
+   outline: none;
+   width: 100%;
+}
+.nav_search_bar_button_title {
+   padding: 0 16px;
+   flex: 1 1 auto;
+   font-size: 14px;
+   font-weight: 600;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+   line-height: 18px;
+   color: #1d1d1d;
+   min-width: 0;
+   display: flex;
+}
+.nav_search_bar_button_loop {
+   padding: 12px;
+   margin: 7px 7px 7px 0;
+   border-radius: 50%;
+   background-color: red;
+}
+.content_tablet{
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
+}
+@media (max-width: 1126px) {
+   ._wrapper {
+      padding: 0 40px;
+   }
+   .logo_svg {
+      width: 80px;
+   }
+}
+@media (max-width: 950px) {
+   .content_logo {
+      flex: none;
+   }
+}
+@media (max-width: 753px) {
+   .content_logo 
+    {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+   }
+   .nav{
+      opacity: 0;
+      visibility: hidden;
+      display:  none;
+   }
+   .content_nav{
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+   }
+   ._wrapper{
+      padding: 0;
+   }
+   .content_tablet {
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      width: 100%;
+   }
+   .content_tablet_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+   }
+   .content_tablet_search {
+   }
+   .content_tablet_search_title {
+   }
+}
